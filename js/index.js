@@ -85,6 +85,25 @@ TextArray[2].textContent = siteContent["main-content"]["services-content"];
 TextArray[3].textContent = siteContent["main-content"]["product-content"];
 TextArray[4].textContent = siteContent["main-content"]["vision-content"];
 
+// |Contact
+const contactH4 = document.querySelector('.contact h4');
+// console.log(contactH4);
+contactH4.textContent = siteContent["contact"]["contact-h4"];
+
+const ContactInfo = document.querySelectorAll('.contact p');
+// console.log(ContactInfo);
+let ContactInfoArray = Array.from(ContactInfo);
+// console.log(ContactInfoArray);
+
+ContactInfoArray[0].textContent = siteContent["contact"]["address"];
+ContactInfoArray[1].textContent = siteContent["contact"]["phone"];
+ContactInfoArray[2].textContent = siteContent["contact"]["email"];
+
+// footer
+const footerContent = document.querySelector('footer p');
+console.log(footerContent);
+footerContent.textContent = siteContent["footer"]["copyright"];
+
 
 
 
