@@ -40,3 +40,90 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const nav = document.querySelectorAll('a');
+// console.log(nav);
+nav.forEach((navItem, i) => {
+  navItem.textContent = siteContent["nav"][`nav-item-${i + 1}`];
+});
+
+const headerText = document.querySelector('.cta-text h1');
+// console.log(headerText);
+headerText.textContent = siteContent["cta"]["h1"];
+
+const buttonText = document.querySelector('.cta-text button');
+// console.log(buttonText);
+buttonText.textContent = siteContent["cta"]["button"];
+
+let ImgSrc = document.getElementById('cta-img');
+// console.log(ImgSrc);
+ImgSrc.setAttribute('src', siteContent["cta"]["img-src"]);
+ 
+let bottomImg = document.getElementById("middle-img");
+// console.log(bottomImg);
+bottomImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// middle content
+const h4s = document.querySelectorAll('.text-content h4');
+// console.log(h4s);
+let Arrayh4s = Array.from(h4s);
+// console.log(Arrayh4s);
+Arrayh4s[0].textContent = siteContent["main-content"]["features-h4"];
+Arrayh4s[1].textContent = siteContent["main-content"]["about-h4"];
+Arrayh4s[2].textContent = siteContent["main-content"]["services-h4"];
+Arrayh4s[3].textContent = siteContent["main-content"]["product-h4"];
+Arrayh4s[4].textContent = siteContent["main-content"]["vision-h4"];
+
+const middleTextContent = document.querySelectorAll('.text-content p');
+// console.log(middleTextContent);
+let TextArray = Array.from(middleTextContent);
+// console.log(TextArray);
+
+TextArray[0].textContent = siteContent["main-content"]["features-content"];
+TextArray[1].textContent = siteContent["main-content"]["about-content"];
+TextArray[2].textContent = siteContent["main-content"]["services-content"];
+TextArray[3].textContent = siteContent["main-content"]["product-content"];
+TextArray[4].textContent = siteContent["main-content"]["vision-content"];
+
+// |Contact
+const contactH4 = document.querySelector('.contact h4');
+// console.log(contactH4);
+contactH4.textContent = siteContent["contact"]["contact-h4"];
+
+const ContactInfo = document.querySelectorAll('.contact p');
+// console.log(ContactInfo);
+let ContactInfoArray = Array.from(ContactInfo);
+// console.log(ContactInfoArray);
+
+ContactInfoArray[0].textContent = siteContent["contact"]["address"];
+ContactInfoArray[1].textContent = siteContent["contact"]["phone"];
+ContactInfoArray[2].textContent = siteContent["contact"]["email"];
+
+// footer
+const footerContent = document.querySelector('footer p');
+console.log(footerContent);
+footerContent.textContent = siteContent["footer"]["copyright"];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
