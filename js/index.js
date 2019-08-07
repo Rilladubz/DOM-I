@@ -45,7 +45,22 @@ const nav = document.querySelectorAll('a');
 // console.log(nav);
 nav.forEach((navItem, i) => {
   navItem.textContent = siteContent["nav"][`nav-item-${i + 1}`];
+  navItem.style.color='green'
 });
+
+const navLinkOne = document.createElement('a');
+const navLinktwo = document.createElement('a');
+navLinkOne.setAttribute('href', '#');
+navLinktwo.setAttribute('href', '#');
+navLinkOne.textContent = 'Item1';
+navLinktwo.textContent = 'Item2';
+// console.log(navLinkOne, navLinktwo);
+const navigation = document.querySelector('.container header nav');
+navigation.appendChild(navLinktwo);
+navigation.prepend(navLinkOne);
+
+
+
 
 const headerText = document.querySelector('.cta-text h1');
 // console.log(headerText);
